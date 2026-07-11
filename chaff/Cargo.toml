@@ -1,0 +1,19 @@
+[package]
+name = "chaff"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+# Configures Rust to build a dynamic mobile shared library object (.so)
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+hmac = "0.12.1"
+sha2 = "0.10.8"
+rand = { version = "0.8.5", features = ["small_rng", "getrandom"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.35", features = ["full"] }
+axum = "0.7.4"
+tower-http = { version = "0.5.1", features = ["cors"] }
+
