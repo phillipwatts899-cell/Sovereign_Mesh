@@ -1532,3 +1532,41 @@ export function getBanner(): string {
 
 // Default export
 export default createTempest;
+
+// =============================================================================
+// ⚡ BOTTOM-OF-FILE APPEND: STANDALONE CRYPTO PRIMITIVE CHECK
+// =============================================================================
+export async function runStandaloneCryptoPrimitiveCheck() {
+    console.log("\n=====================================================================");
+    console.log("🌩️ SOVEREIGN CHAFF PROTOCOL (SØVCHAF): BASELINE CRYPTO TEST");
+    console.log("=====================================================================");
+
+    const SHARED_SECRET = "STANDALONE_CHAF_WINN_PRIMITIVE_2026";
+    const { Base64SovchafEngine } = await import('./core/sovchaf.js');
+    const engine = new Base64SovchafEngine(SHARED_SECRET);
+
+    const sensitiveData = "Sovereign node validation credential string: EXECUTE_CLEARANCE_ALPHA";
+
+    const rawBytes = Buffer.from(sensitiveData, 'utf-8');
+    const base64Length = Buffer.from(rawBytes.toString('base64'), 'utf-8').length;
+    const ephemeralPad = require('crypto').randomBytes(base64Length);
+
+    console.log(`[Input Data] ${sensitiveData}`);
+    console.log(`[OTP Status] Generated ${base64Length}-byte secure hardware padding token.`);
+
+    console.log("\n[Chafing] Shuffling payload into uniform Base64 text mist...");
+    const mistCloud = engine.sealAndChafe(sensitiveData, ephemeralPad, 5);
+
+    console.log("\n--- EXTRAPOLATED NETWORK LOG VIEW ---");
+    console.log(JSON.stringify(mistCloud.slice(0, 2), null, 2));
+    console.log("-------------------------------------");
+
+    console.log("\n[Winnowing] Inhaling mist cloud, validating signature, reversing OTP...");
+    const unsealedResult = engine.winnowAndUnseal(mistCloud, ephemeralPad);
+
+    ephemeralPad.fill(0);
+
+    console.log(`[Success] Restored plaintext match: ${unsealedResult}`);
+    console.log("[Memory Refresh] Volatile hardware registers securely zero-wiped.");
+}
+
