@@ -1,0 +1,7 @@
+{
+  "name": "Pt\u0101h Automated Pipeline Iteration Run",
+  "type": "auto",
+  "model": "llama3.2:latest",
+  "provider": "local",
+  "mission": "Pivot all active squads to run deep recursive logging checks on the new camera nodes."
+}
