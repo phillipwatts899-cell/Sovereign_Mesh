@@ -214,6 +214,8 @@ Operators map to MITRE ATT&CK and Cyber Kill Chain phases (recon is live; later 
 Red-teaming shouldn't be a priesthood. Bring an adapter, a prompt pack, a runbook, a new arsenal tool, or a bug report.
 
 **One rule, non-negotiable:** everything here is for **authorized testing only**. Owned, scoped, or consenting targets. Build for defenders, or don't build it here.
+For full legal disclaimers, framework compliances, and ethical use guidelines:
+🔗 **[Read our Full Legal Disclaimer](./DISCLAIMER.md)**
 
 1. Fork it, branch it.
 2. Open a PR with tests. If you touch a headline number, `npm run verify-claims` has to stay green.
